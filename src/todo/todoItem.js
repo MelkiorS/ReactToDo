@@ -18,7 +18,7 @@ const styles ={
 }
 
  function TodoItem({todo, index, onChange}){
-    const {removeToto} = useContext(Context);
+    const {removeTodo} = useContext(Context);
     const classes=[];
     if(todo.completed){
         classes.push('done');
@@ -37,8 +37,8 @@ const styles ={
 
             <button
                 className='rm'
-                // onClick={()=>removeToto(todo.id)}
-                onClick={removeToto.bind(null,todo.id)}
+                // onClick={()=>removeTodo(todo.id)}
+                onClick={removeTodo.bind(null,todo.id)}
             >&times;</button>
 
         </li>
